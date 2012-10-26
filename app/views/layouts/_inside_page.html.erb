@@ -1,8 +1,9 @@
 <div id="inside_content_inner">
 <div class="col1">
 		
-		<%#TODO =render_blocks %>        
-		
+		<%if @page%>
+		<%=render :partial => 'blocks/section_contents_list'%>     
+		<%end%>
 
 </div>
 <div class="main_content_col">
