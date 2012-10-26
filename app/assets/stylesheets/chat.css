@@ -1,0 +1,27 @@
+#convo_box {
+}
+
+#convo_box .inbox {
+    height: 150px;
+    max-height: 250px;
+    overflow:auto;
+    width:100%;
+    border: 1px dotted Gray;
+    padding: 2px;
+}
+
+#convo_box .chatters {
+    width: 20%;
+    float:left;
+}
+
+#message {
+    margin-top: 5px; 
+    float:none;
+}
+
+
+.system_message {
+    color:green;
+}
+

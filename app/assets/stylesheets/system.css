@@ -1,0 +1,510 @@
+body {
+  margin: 0;
+}
+
+div#calendar_content {
+  clear: both;
+}
+
+div.details {
+  border-top: 1px dotted #bbb;
+  clear: left;
+  color: #bbb;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  padding: 5px 0 0 0;
+}
+
+div.fieldWithErrors {
+  display: inline;
+  margin-top: -12px;
+}
+
+  div.fieldWithErrors input {
+    border: 1px solid red;
+  }
+
+fieldset {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+  form#product_options {
+    clear: left;
+  }
+
+  form li {
+    list-style-type: none;
+  }
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: 1px solid gray;
+}
+
+  input.no_border {
+    border: 0;
+  }
+
+li input {
+  border: 0;
+}
+
+p#page_status {
+  color: red;
+}
+
+p.enquireField {
+  margin: 25px 0 0 0;
+}
+
+select {
+  border: 1px solid gray;
+}
+
+span.required {
+  color: red;
+}
+
+table.calendar_month {
+  clear: left;
+  width: 100%;
+}
+
+td.details {
+  color: #bbb;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  padding: 0 0 0 15px;	
+}
+
+textarea {
+  border: 1px solid gray;
+}
+
+ul.enquireOptions {
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul.intro {
+  margin: -24px 0 -24px 0;
+  padding: 12px 0 12px 30px;
+}
+
+ul.options {
+  font-size: 14px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  -moz-outline-style: none;
+}
+
+#calendar_content ul li {
+  background-image:none;
+  clear: left;
+  list-style-type: none;
+}
+
+#calendar_menubar img {
+  border: 0;
+}
+
+#calendar_menubar li img {
+  vertical-align: middle;
+}
+
+#calendar_menubar ul.menubar_left li {
+  float: left;
+  list-style-image: none;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+#calendar_menubar ul.menubar_right li {
+  float: left;
+  list-style-image: none;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+#calendar_menubar .menubar_left {
+  float: left;
+}
+
+#calendar_menubar .menubar_right {
+  float: right;
+  width: 150px;
+}
+
+#centerColumn .cartList {
+  padding-left: 3px;
+  padding-right: 3px;
+  width: 100%;
+}
+
+  #centerColumn .cartList td {
+    border-top: 1px solid gray;
+  }
+
+    #centerColumn .cartList td.linkColumn {
+      border: 0;
+      text-align: right;
+    }
+
+#clear_br {
+  clear: both;
+}
+
+#day_content {
+  clear: left;
+}
+
+#flash_error {
+  color: red;
+}
+
+#flash_notice {
+  color: red;
+  font-size: 11px;
+}
+
+#help_click {
+  color: red;
+  font-size: 11px;
+}
+
+#intro {
+  background-color: #f5f5f5;
+  font-size: 12px;
+  padding: 5px;
+}
+
+#main table.calendar_month td ul li {
+  list-style-image: none;
+  list-style-type: none;
+}
+
+#mainColumn {
+  color: #6f6666;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+  #mainColumn h2 {
+    color: black;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 14px 0 41px 0;
+  }
+
+#week_content {
+  clear: left;
+}
+
+#year_content {
+  clear: left;
+}
+
+.buttonPanel {
+  clear: left;
+  text-align: right;
+}
+
+.calendar_marker {
+  float: left;
+  height: 20px;
+  margin-right: 2px;
+  width: 10px;
+}
+
+.calendar_month td {
+  border: 1px solid gray;
+  height: 100px;
+  vertical-align: top;
+}
+
+.color_blob {
+  clear: left;
+  float: left;
+  height: 25px;
+  margin-right: 10px;
+  width: 25px;
+}
+
+.content p.fieldName {
+  clear: left;
+  float: left;
+  margin-top: 10px;
+  padding: 0 50px 0 0;
+  text-align: right;
+  width: 110px;
+}
+
+.content p.fieldValue {
+  float: left;
+  margin-top: 10px;
+  width: 300px;
+}
+
+/* Remove pesky bullets added by tripoli */
+.content ul.tabbernav li:before {
+  content: '';
+}
+
+body .content ul li:before {
+  content: '';
+}
+
+.content #event_show p.fieldName {
+  font-weight:bold;
+  margin:0px;
+  padding:0px;
+}
+.content #event_show p.fieldValue {
+  margin:0px;
+  padding:0px;
+}
+
+.details {
+  border-top: 1px dotted #bbb;
+  clear: left;
+  color: #bbb;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  padding: 5px 0 0 0;
+} 
+
+.edit_wall_post_link {
+	cursor: pointer;	
+}
+
+.errorExplanation {
+  color: red;
+  font-size: 12px;
+}
+
+  .errorExplanation#errorExplanation h2 {
+    color: red;
+    font-size: 13px;
+    margin: 10px 0 10px 0;
+  }
+
+.fieldName {
+  clear: left;
+  float: left;
+  margin-top: 10px;
+  padding: 0 50px 0 0;
+  text-align: right;
+  width: 110px;
+}
+
+.fieldValue {
+  float: left;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.fieldWithErrors textarea {
+  border: 1px solid red;
+}
+
+.fullsize_image {
+  text-align: center;
+}
+
+.help {
+  background-color: #f5f5f5;
+  border: 1px dashed #ddd;
+  clear: left;
+  font-size: 12px;
+  margin-bottom: -12px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.highlight {
+  color: green;
+}
+
+.intro {
+  background-color: #f5f5f5;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.invalid_postage_bracket {
+  color: red;
+}
+
+.key {
+  float: left;
+  margin-bottom: 25px;
+}
+
+  .key a {
+    float: left;
+    margin-right: 15px;
+  }
+
+.mandatory_message {
+  font-style: italic;
+}
+
+.nextLink {
+  float: right;
+}
+
+.optionsList {
+  font-size: 13px;
+  list-style-type: none;
+  margin: 11px 0 0 0;
+  padding: 0 17px 0 17px;
+}
+
+.owner_only_action {
+  color: lightgray;
+}
+
+.page_status {
+  color: red;
+}
+
+.previousLink {
+  float: left;
+}
+
+.price {
+  clear: left;
+}
+
+.product_details {
+  clear: left;
+}
+
+.product_name {
+  clear: left;
+  float: left;
+}
+
+.product_overview {
+  float: left;
+}
+
+.product_price {
+  float: right;
+}
+
+.product_thumbnail {
+  float: left;
+  padding: 0 5px 5px 0;
+}
+
+.profile {
+  clear: left;
+}
+
+  .profile .photo {
+    margin: 10px 0 10px 75px;
+  }
+
+.sectionPagesList {
+  font-size: 13px;
+  list-style-type: none;
+  margin: 11px 0 0 0;
+  padding: 0 37px 0 37px;
+}
+
+.thumbnail {
+  border: 1px solid gray;
+  margin: 2px;
+}
+
+  .thumbnail:hover {
+    border: 1px solid red;
+  }
+
+  .thumbnail img {
+    border: 0;
+  }
+
+.userDetails {
+  font-size: 13px;
+  list-style-type: none;
+  margin: 11px 0 0 0;
+  padding: 0 37px 0 37px;
+}
+
+.unread_inbox_message {
+  background-color: #FFF8C6;
+}
+
+ul.inbox_message_menu {
+	text-align: left;
+	margin: 1em 0 1em 0;
+	font: bold 11px;
+	font-size: 13px;
+	border-bottom: 1px solid #000000;
+	list-style-type: none;
+	padding: 3px 10px 0px 10px;
+}
+  
+ul.inbox_message_menu li {
+	display: inline;
+	list-style-type:none;
+	padding:0;
+	background-image:none;
+}
+
+ul.inbox_message_menu li.current_page a  {
+	background-color: #fff;
+	color: #000;
+	position: relative;
+	top: 0px;
+	padding-top: 2px;
+	text-decoration: none;
+}
+ul.inbox_message_menu li a:visited  {
+	text-decoration: none;
+}
+  
+ul.inbox_message_menu li a {
+	padding: 2px 4px;
+	border: 1px solid #000000;
+	background-color: #CCCCCC;
+	color: #000000;
+	margin-right: 0px;
+	text-decoration: none;
+	border-bottom: none;
+}
+  
+ul.inbox_message_menu a:hover {
+	background: #fff;
+}
+
+.chart {
+	margin:10px;
+}
+
+.failedLinkThumbnail {
+  background-color: black;
+  text-indent: -1000em;
+  height: 200px;
+}

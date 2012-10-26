@@ -5,14 +5,21 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope. 
  *= require bootstrap
- *= require formtastic-bootstrap 
+ *= require formtastic-bootstrap
  *= require ym_core 
  *= require redactor
  *= require ym_cms 
  *= require font-awesome
  *= require sticky-footer 
+ *= require system
+ *= require chat
+ *= require tabber
+ *= require reset
+ *= require generic
+ *= require tabbersystem
+ *= require styles
+
  *= require_self
- 
 */
 
 /*========== CSS3 magic (move to ym_core) ==========*/

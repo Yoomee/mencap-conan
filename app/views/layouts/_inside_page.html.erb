@@ -1,0 +1,27 @@
+<div id="inside_content_inner">
+<div class="col1">
+		
+		<%#TODO =render_blocks %>        
+		
+
+</div>
+<div class="main_content_col">
+    <div id="breadcrumb_box">
+		<%#TODO render_breadcrumb @breadcrumb%>
+    </div><!--/breadcrumb_box-->
+    
+
+        <%if flash[:notice]%><p id='flash_notice'><%=flash[:notice]%></p><%end%>
+         <%if flash[:error]%><p id='flash_error'><%=flash[:error]%></p><%end%>
+        <% if controller_name == 'section' && action_name == 'show'%>
+        <%else%>
+            <h1 id="article_title"><%=@page.title if @page%></h1>
+            <br class="clear" />
+        <%end%>
+        <%=yield%>
+      
+    
+
+</div>
+<br clear="all">
+</div>

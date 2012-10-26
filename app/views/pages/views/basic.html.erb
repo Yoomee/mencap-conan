@@ -1,0 +1,28 @@
+
+<div id='pagetext'>
+    <%=contentize(@page.text)%>
+</div>
+
+<div id="article_col_3">
+		<%#if @controller_name == 'page' && @page%>
+            <%if @page.image%>
+                <div id="article_image"  class="pull_quote">
+                  <%=image_for @page, "220x"%>
+
+            <%end%>
+
+ </div><!--/article_col3-->
+
+<br class="clear" />
+<div class='details'>
+  <span class='noprint'>
+    
+   <%=options_panel do %>
+      <%=link_if_can("Edit page", [:edit, @page])%>
+      <%=link_if_can("Delete page", [:destroy, @page], :confirm => "Are you sure?") unless @page.slug.present?%>
+      <%=link_if_can("New page", [:new, Page])%>
+    <%end%>  
+    
+    
+  </span>
+</div>

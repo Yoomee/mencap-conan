@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+  <head>
+    <title>
+      TODO
+    </title>
+    <meta name="keywords" content="" />
+    <meta name="Generator" content="andymayer.net (Ruby on Rails)" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name='info' content='<%=@page_title%><%=@page_title2%>'/>
+    <link rel='shortcut icon' href='/assets/favicon.ico'></link>
+    <%=stylesheet_link_tag 'application.css'%>
+	  <%=stylesheet_link_tag 'print', :media => 'print'%>
+  	<!--[if IE 6]>
+	    <%=stylesheet_link_tag 'ie6.css'%>
+  	<![endif]-->
+	  <!--[if IE 7]>
+    	<%=stylesheet_link_tag 'ie7.css'%>
+  	<![endif]-->
+     <!--[if lte IE 5.5]>
+    	<%=stylesheet_link_tag 'ie6.css'%>
+		<%=stylesheet_link_tag 'old_ie.css'%>
+	<![endif]-->
+	  <%=javascript_include_tag("application")%>
+    <%=javascript_tag do%>
+      $(document).ready(function(){
+        $("#switch1").click(function () {
+          $("body").removeClass("body_bg_02 body_bg_03 body_bg_04 body_bg_05");  
+          $("body").addClass("body_bg_01");
+        });
+        $("#switch2").click(function () {
+          $("body").removeClass("body_bg_01 body_bg_03 body_bg_04 body_bg_05"); 
+          $("body").addClass("body_bg_02");
+        });    
+        $("#switch3").click(function () {
+          $("body").removeClass("body_bg_01 body_bg_02 body_bg_04 body_bg_05");  
+          $("body").addClass("body_bg_03");
+        });
+        $("#switch4").click(function () {
+          $("body").removeClass("body_bg_01 body_bg_02 body_bg_03 body_bg_05"); 
+          $("body").addClass("body_bg_04");
+        });      
+        $("#switch5").click(function () {
+          $("body").removeClass("body_bg_01 body_bg_02 body_bg_03 body_bg_04"); 
+          $("body").addClass("body_bg_05");
+        });    
+      });
+    <%end%>
+    <%=yield :head%>
+  </head>
+  <body <%if @is_home%>id="home"<%else%>id="hub"<%end%> class="body_bg_0<%=rand(5) + 1%>">
+    <div id="wrapper" <%if @page && @page.id == 12%>class="whos_who"<%end%>>
+      <div id="header">
+        <a id='site_logo' href="/">Sheffield Mencap &amp; Gateway</a>
+          <img id="logo_img" src="/assets/logo.gif" alt="Sheffield Mencap and Gateway" title="Sheffield Mencap and Gateway" width="" height="" />
+        
+      	<div id="utilities">
+      	  <form action="/search/results" method="post">
+      		  <div id='search_box'>
+      			  <input id="search_field" name="term" onfocus="var element = document.getElementById('search_field');element.value='';" type="text" value="Search" />          
+        			<input id="search_icon" type="submit" value="" name="commit" title="search"/>
+        		</div>
+        	</form>     
+        	<div id="user_links">
+	    	  	<a href="/">Home</a>
+	    		  <%if @m%>
+	    		    <%=link_to 'Logout', :controller => 'member', :action => 'logout'%>
+  	    		<%else%>
+	      		  <a href="/member">Login</a>
+	      		<%end%>
+            <%=link_to 'Admin', '/admin', :id => 'admin_button'%>
+	
+  				  
+        	</div>
+        </div>
+	      <div id="header_quotes">
+            <div id="background_switch_links">
+                <a href="javascript:void(0);" id="switch1" title="Switch it!">1</a>
+                <a href="javascript:void(0);" id="switch2" title="Switch it!">2</a>
+                <a href="javascript:void(0);" id="switch3" title="Switch it!">3</a>
+                <a href="javascript:void(0);" id="switch4" title="Switch it!">4</a>
+                <a href="javascript:void(0);" id="switch5" title="Switch it!">5</a>
+	  	    </div>	
+      	</div>
+    	  <div id="nav_bg"></div>
+        <ul id="nav">
+          <li><%=link_to 'What we do'%></li>
+          <li><%=link_to 'How we do it'%></li>
+          <li><%=link_to 'Families'%></li>
+          <li><%=link_to 'Our stuff' %></li>
+          <li><%=link_to 'Support us' %></li>
+          <li><%=link_to 'Contact us'%></li>
+        </ul>   
+        <br class="clear" />
+      </div><!-- /header -->
+      <div class="content">
+        <%if @is_home%>
+    		  <%=render :partial => 'layouts/home_page'%>
+    		<%else%><!--inside & hub pages-->
+    		  <%=render :partial => 'layouts/inside_page'%>
+  	    <%end%>
+        <br clear="all" />   
+      </div><!-- /content -->
+      <div id="footer">
+    		<div id="footer_content">
+      		<div id="footer_main_links">
+      		  <a href="/">Home</a>
+      		  <%=link_to 'Contact us'%>
+      		  <%=link_to 'Sitemap', '/pages'%>
+      		  <%=link_to 'Legal' %>
+      		  <%=link_to 'Website credits' %>
+      		</div>
+          <div id="footer_credits">
+            <!--<p id="copyright">
+              &copy; Sheffield Mencap and Gateway<br />
+        			Sheffield Mencap is a Registered Charity, No. 1056155,<br />
+        			and a Company Limited by Guarantee, No. 3168775.
+        		</p>-->
+        	</div>
+        	<a id="diversity" href='http://www.nationalcentrefordiversity.com/'>Investors in Diversity</a>
+          <a id="lottery" href='http://www.awardsforall.org.uk/' target="_blank">Website<br /> development<br /> funded by<span class="hide"> awards for all</span></a><a id="siteby" href='http://www.yoomee.com'>Site by</a>
+        </div>
+      </div>     
+    </div><!-- /wrapper -->	
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-9364192-1");
+        pageTracker._trackPageview();
+      } 
+      catch(err) {}
+    </script>
+  </body>
+</html>

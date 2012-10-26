@@ -1,0 +1,40 @@
+<div class="col1">
+	<h2>Sheffield Mencap &amp; Gateway</h2>
+	<h5 id="mencap_intro">Was set up in 1951 by parents of children with learning disabilities who wanted to give their children a better life and continues to exist to support people with learning disabilities in Sheffield</h5>
+	<%=link_to 'more about us' %>
+	<%=link_to 'To find out more about any of our services or how you could get involved, please get in touch', "/", :id => "find_out_more_panel" %>
+	
+</div>
+<div class="col2">
+	<img src="/assets/home_img_01.jpg" alt="Family and carers" />
+	<h4><%=link_to 'Family and Carers' %></h4>
+	<p>Find out about our support groups, events and resources for families and carers.</p>
+	<h4><%=link_to 'Volunteer' %></h4>
+	<p>Help support us by giving your time.</p>
+</div>
+<div class="col3">
+	<h3>News</h3>
+	<div id="news">
+	   <%=link_to "What's on this week?", "/", :id=>"whats_on_this_week"%>
+    <ul class="lst_pic">
+      <%news_articles=Page.find_by_slug(:news).children%>
+      <%for page in news_articles.first 3%>
+    		<li>
+    		  <%=link_to page do%>
+    					<%if page.image%>
+		    				<%=image_for page, "110x"%>
+    					<%end%>
+		          <strong class='summary'>
+		           	<%=page.title%>
+		          </strong>
+		      <%end%>    
+		        <span class='events_desc'>
+		          <%=strip_tags page.intro%>
+		          <%=link_to 'Read more', page%>
+		        </span>
+     		    <br class='clear' />
+    		</li>
+      <%end%>
+    </ul>
+  </div>
+</div>
