@@ -6,29 +6,24 @@
    $("li.sectionItem").addClass("section_open");
 	}
 </script>
-<%contents = @page.parent.children%>
+<%if @page%>
+   <%contents = @page.root.children%>
+<%else%>
+   <%contents = []%>
+<%end%>
 <ul class='sectionContentsList'>
   <%for item in contents%>
     <%if item.children.size > 0%>
-      <%contents = item.contents(@m)%>
-      <%if contents.last == Section.find(14)%>
-	<%contents.pop%>
-	<%contents << OpenStruct.new(:title => 'News archive', :url => url_for(:controller => 'section', :action => 'archive', :id => 14))%>
-      <%end%>
+      <%contents = item.children%>
+
       <li id="list_item_<%=item.id%>" class='sectionItem'>
-        <a href='javascript:void(0);' onclick="dotoggle('ul#item_<%=item.id%>'); doreplace('li#list_item_<%=item.id%>');"><%=item.name%></a>
+        <a href='javascript:void(0);' onclick="dotoggle('ul#item_<%=item.id%>'); doreplace('li#list_item_<%=item.id%>');"><%=item.title%></a>
       </li>
       <ul id='item_<%=item.id%>' class='submenuitems' style='display: none'>
         <%contents.each do |subitem|%>
-          <%if subitem.class.in?([Page, Section])%>
   		      <li class='subitem'>
-	  		      <%=link_to name_or_title(subitem), :controller => subitem.class.to_s.downcase, :action => 'show', :id => subitem%>
+	  		      <%=link_to subitem, :id=>subitem.id%>
 		  		  </li>
-		  		<%else%>
-		  		  <li class='subitem'>
-		  		    <%=link_to subitem%>
-		  		  </li>
-		  		<%end%>
         <%end%>
       </ul>
     <%else%>

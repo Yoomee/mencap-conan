@@ -2,7 +2,7 @@
 <html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
   <head>
     <title>
-      TODO
+      Sheffield Mencap and Gateway : for people with learning disabilities in Sheffield
     </title>
     <meta name="keywords" content="" />
     <meta name="Generator" content="andymayer.net (Ruby on Rails)" />
@@ -85,12 +85,12 @@
       	</div>
     	  <div id="nav_bg"></div>
         <ul id="nav">
-          <li><%=link_to 'What we do'%></li>
-          <li><%=link_to 'How we do it'%></li>
-          <li><%=link_to 'Families'%></li>
-          <li><%=link_to 'Our stuff' %></li>
-          <li><%=link_to 'Support us' %></li>
-          <li><%=link_to 'Contact us'%></li>
+          <li><%=link_to_slug 'What we do', :what_we_do %></li>
+          <li><%=link_to_slug 'How we do it', :how_we_do_it%></li>
+          <li><%=link_to_slug 'Families', :families%></li>
+          <li><%=link_to_slug 'Our stuff', :our_suff %></li>
+          <li><%=link_to_slug 'Support us', :support_us %></li>
+          <li><%=link_to_slug 'Contact us', :contact_us%></li>
         </ul>   
         <br class="clear" />
       </div><!-- /header -->
