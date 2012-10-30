@@ -1,0 +1,21 @@
+
+.row
+  .span12
+    -@page_children.each do |page|
+      .row.mb-2
+        .span7
+          %h3=link_to_self(page)
+          %p=truncate(strip_tags(page.text), :length => 220)
+          =link_to raw('&rarr; Read more'), page
+    -if can?(:new, Page)
+      .row.mb-2
+        .span2
+          =link_to("+ Add a subpage", new_child_page_path(:parent_id => @page.id))
+.row
+  .span8
+    =options_panel do
+      =back_link
+      =link_if_can("Edit page", [:edit, @page])
+      =link_if_can("Delete page", [:destroy, @page], :confirm => "Are you sure?") unless @page.slug.present?
+      =link_if_can("New page", [:new, Page])
+      =link_if_can("Set order", [:order, Page])

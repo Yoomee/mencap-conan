@@ -8,20 +8,33 @@
 </div>
 <div class="main_content_col">
     <div id="breadcrumb_box">
-		<%#TODO render_breadcrumb @breadcrumb%>
-    </div><!--/breadcrumb_box-->
+		<a href="/">Home</a>
+		&nbsp;>&nbsp;
+		<%if @page%>
+		  <%if @page.parent != @page.root%>
+	    <%=link_to @page.root.title%>
+	  	<%end%>
+		  <%if @page.parent%>
+				 &nbsp;>&nbsp;
+		     <%=link_to @page.parent.title%>
+			   &nbsp;>&nbsp;
+			   <%=link_to @page.title%>
+		  <%end%>
+
+		<%end%>
+		</div><!--/breadcrumb_box-->
     
 
         <%if flash[:notice]%><p id='flash_notice'><%=flash[:notice]%></p><%end%>
-         <%if flash[:error]%><p id='flash_error'><%=flash[:error]%></p><%end%>
-        <% if controller_name == 'section' && action_name == 'show'%>
+        <%if flash[:error]%><p id='flash_error'><%=flash[:error]%></p><%end%>
+        <%if @page && @page.slug=='families'%>
+				  <%=render :partial => 'layouts/hub_page'%>
         <%else%>
             <h1 id="article_title"><%=@page.title if @page%></h1>
             <br class="clear" />
+            <%=yield%>
         <%end%>
-        <%=yield%>
-      
-    
+
 
 </div>
 <br clear="all">

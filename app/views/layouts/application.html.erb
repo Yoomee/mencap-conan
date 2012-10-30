@@ -64,14 +64,17 @@
         	</form>     
         	<div id="user_links">
 	    	  	<a href="/">Home</a>
-	    		  <%if @m%>
-	    		    <%=link_to 'Logout', :controller => 'member', :action => 'logout'%>
+						<%if current_user && current_user.admin?%>
+               <%=link_to 'Admin', '/pages', :id => 'admin_button'%>
+						<%end%>
+
+	    		  <%if logged_in?%>
+		    		   <%=link_to("Logout", sign_out_path, :method => :delete)%>
   	    		<%else%>
-	      		  <a href="/member">Login</a>
+	      		  <a href="/login">Login</a>
 	      		<%end%>
-            <%=link_to 'Admin', '/admin', :id => 'admin_button'%>
-	
-  				  
+
+	    		  
         	</div>
         </div>
 	      <div id="header_quotes">
