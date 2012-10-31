@@ -33,7 +33,7 @@ group :test do
   gem 'turn', :require => false
 end
 gem "rake", "0.8.7"
-gem "exception_notification"
+gem 'exception_notification', "2.6.1", git:'git://github.com/alanjds/exception_notification.git'
 gem "country-select"
 gem "formtastic-bootstrap", :git => "git://github.com/cgunther/formtastic-bootstrap.git", :branch => "bootstrap-2"
 gem "whenever", :require => false
@@ -41,6 +41,7 @@ gem "ym_core"
 gem "ym_cms"
 gem "ym_users"
 gem "ym_permalinks"
+
 
 group :development do
   gem 'growl'
