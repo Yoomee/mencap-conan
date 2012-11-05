@@ -8,8 +8,33 @@
             <%if @page.image%>
                 <div id="article_image"  class="pull_quote">
                   <%=image_for @page, "220x"%>
-
+                  <%unless @page.custom4.blank?%>
+                    <%=contentize(@page.custom4)%>
+                  <%end%>
+                 </div>      
             <%end%>
+            
+            <%unless @page.custom1.blank?%>
+                <div id="pull_quote_large" class="pull_quote">
+                    <%=contentize(@page.custom1)%>
+                </div>
+            <%end%>
+            <%unless @page.custom2.blank?%>
+                <div id="pull_quote_small" class="pull_quote">
+                    <%=contentize(@page.custom2)%>
+                </div>
+            <%end%>
+            <%unless @page.custom3.blank?%>
+                <div id="call_to_action" class="pull_quote">
+                    <%=contentize(@page.custom3)%>
+                </div><!--/call_to_action-->   
+            <%end%>
+            
+            <%unless @page.custom5.blank?%>
+                <div id="pull_quote_logos" class="pull_quote">
+                    <%=contentize(@page.custom5)%>
+                </div><!--/pull_quote_logos-->   
+            <%end%>            
 
  </div><!--/article_col3-->
 

@@ -9,10 +9,10 @@
 <div class="main_content_col">
     <div id="breadcrumb_box">
 		<a href="/">Home</a>
-		&nbsp;>&nbsp;
 		<%if @page%>
 		  <%if @page.parent != @page.root%>
-	    <%=link_to @page.root.title%>
+		  		&nbsp;>&nbsp;
+	       <%=link_to @page.root.title%>
 	  	<%end%>
 		  <%if @page.parent%>
 				 &nbsp;>&nbsp;

@@ -7,7 +7,14 @@
     .controls
       =form.date_select :publication_date, {:order => [:day, :month, :year], :prompt => @page.new_record?, :default => @page.created_at}, :class => "span2"
   =form.input :text, :as => :redactor  
-  =form.input :intro, :as => :redactor, :input_html => {:rows=>8}  
+  =form.input :intro, :label => "Intro text (optional)", :as => :redactor, :input_html => {:rows=>8}  
+  =form.input :custom1, :label => "Pull quote large (optional)", :as => :redactor, :input_html => {:rows=>8}  
+  =form.input :custom2, :label => "Document link for SCP Newsletter (optional)", :as => :redactor, :input_html => {:rows=>8}  
+  =form.input :custom3, :label => "Contact details/call to action (optional)", :as => :redactor, :input_html => {:rows=>8}  
+  =form.input :custom4, :label => "Credit for article image photo (if required)", :as => :redactor, :input_html => {:rows=>8}  
+  =form.input :custom5, :label => "Logos/smallprint (optional)", :as => :redactor, :input_html => {:rows=>8}  
+
+  
   -if !@page.new_record? && @page.image
     .control-group
       =image_for(@page, "100x100#")
