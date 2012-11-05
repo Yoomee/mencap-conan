@@ -7,15 +7,15 @@
 </div>
 <div class="col2">
 	<img src="/assets/home_img_01.jpg" alt="Family and carers" />
-	<h4><%=link_to 'Family and Carers' %></h4>
+	<h4><%=link_to_slug 'Family and Carers', :families %></h4>
 	<p>Find out about our support groups, events and resources for families and carers.</p>
-	<h4><%=link_to 'Volunteer' %></h4>
+	<h4><%=link_to_slug 'Volunteer', :volunteer %></h4>
 	<p>Help support us by giving your time.</p>
 </div>
 <div class="col3">
 	<h3>News</h3>
 	<div id="news">
-	   <%=link_to "What's on this week?", "/", :id=>"whats_on_this_week"%>
+	   <%=link_to_slug "What's on this week?", :whats_on, :id=>"whats_on_this_week"%>
     <ul class="lst_pic">
       <%news_articles=Page.find_by_slug(:news).children%>
       <%for page in news_articles.first 3%>
