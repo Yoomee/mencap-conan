@@ -6,9 +6,11 @@ class Ability
   def initialize(user)
     
     # open ability
+    can :show, Page, :draft => false
     
     if user.try(:admin?)
-      can :manage, :all      
+      can :manage, :all   
+      can :destroy, Page   
       # admin ability
     elsif user
       # user ability
