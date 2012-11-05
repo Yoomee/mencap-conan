@@ -88,8 +88,10 @@ CONTENT ONLY
 .content h1 { font-size: 25px;  }
 .content h2 { font-size:20px; color: #1f1f1f; line-height: 1.2em;}
 .content h3 { font-size: 16px; }
-.content h4 { font-size: 16px; color: #04367e; }
-.content h5 { font-size: 18px; font-weight: normal;  line-height: 1.2em;}
+/*.content h4 { font-size: 16px; color: #04367e; } */
+/*.content h5 { font-size: 18px; font-weight: normal;  line-height: 1.2em;}*/
+.content h4 { font-size: 18px; font-weight: normal;  line-height: 1.2em;}
+
 .content h6 { font-size: 17px; }
 
 /* HR */
