@@ -109,10 +109,10 @@
     		<div id="footer_content">
       		<div id="footer_main_links">
       		  <a href="/">Home</a>
-      		  <%=link_to 'Contact us'%>
+      		  <%=link_to_slug 'Contact us', :contact_us%>
       		  <%=link_to 'Sitemap', '/pages'%>
-      		  <%=link_to 'Legal' %>
-      		  <%=link_to 'Website credits' %>
+      		  <%=link_to_slug 'Legal', :legal %>
+      		  <%=link_to_slug 'Website credits', :website_credits %>
       		</div>
           <div id="footer_credits">
             <!--<p id="copyright">
