@@ -7,7 +7,11 @@
 	}
 </script>
 <%if @page%>
-   <%contents = @page.root.children%>
+   <%if @page.parent && @page.parent.id = 33%>
+      <%contents = Page.find(3).root.children%>
+   <%else%>
+      <%contents = @page.root.children%>
+   <%end%>
 <%else%>
    <%contents = []%>
 <%end%>
