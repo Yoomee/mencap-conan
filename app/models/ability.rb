@@ -6,6 +6,7 @@ class Ability
   def initialize(user)
     
     # open ability
+    can :create, Enquiry
     can [:show, :index], Page, :draft => false
 
     if user.try(:admin?)

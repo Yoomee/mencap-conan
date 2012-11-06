@@ -17,6 +17,10 @@ b {
 	font-weight:bold;	
 }
 
+fieldset  { 
+	border: none;
+	}
+
 #background_switch_links a {
 	font-size:15px;
 	font-weight:bold;

@@ -1,0 +1,8 @@
+=form.inputs(:class => "mt-2") do
+  =form.input :name, :label => "My name is"
+  =form.input :email, :label => "My email address is"
+  =form.input :phone_number
+  =form.input :address, :as => :text, :input_html => {:class => "span3", :rows => 6}
+  =form.input :postcode
+
+  =form.input :request, :label => "I would like more information about:", :as => :check_boxes, :collection => ["Day Services", "Progression to Independence - Life Skills Course","Directions - Life Skills Course","Sharing Caring Project","Out and About Befriending Scheme","Older Families Planning Project","Gateway Clubs - Social Clubs in the Evenings","Shine out on Saturdays - Performing Arts Club for Kids","Sunday Lunch Club","Volunteering","Fundraising/Making a Donation","Job Vacancies at Sheffield Mencap &amp; Gateway"]

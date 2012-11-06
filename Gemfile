@@ -41,11 +41,12 @@ gem "ym_core"
 gem "ym_cms"
 gem "ym_users"
 gem "ym_permalinks"
-
+gem 'ym_enquiries'
 
 group :development do
   gem 'growl'
   gem 'mailcatcher'
+  gem 'letter_opener'
   gem 'ruby-debug19'
   gem 'ym_tools'
   gem 'passenger'
