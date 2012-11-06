@@ -13,6 +13,10 @@ body {
 	margin:0px;
 }
 
+b {
+	font-weight:bold;	
+}
+
 #background_switch_links a {
 	font-size:15px;
 	font-weight:bold;
@@ -925,6 +929,7 @@ margin:0;
 padding:8px 86px 0 0;
 text-align:right;
 width:70px;
+font-size: 10px;
 }
 a#lottery:hover {
 	background-position:bottom right;
