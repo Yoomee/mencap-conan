@@ -7,8 +7,8 @@
 	}
 </script>
 <%if @page%>
-   <%if @page.parent && @page.parent.id = 33%>
-      <%contents = Page.find(3).root.children%>
+   <%if @page.parent && @page.descendant_of_slug(:this_week)%>
+      <%contents = Page.find_by_slug(:what_we_do).root.children%>
    <%else%>
       <%contents = @page.root.children%>
    <%end%>
