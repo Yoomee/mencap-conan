@@ -20,6 +20,10 @@ b {
 fieldset  { 
 	border: none;
 	}
+	
+#search_field  {
+	border-radius: 0px;
+}
 
 #background_switch_links a {
 	font-size:15px;
