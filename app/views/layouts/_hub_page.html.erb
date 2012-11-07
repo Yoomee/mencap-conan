@@ -31,7 +31,7 @@
   			 <%news_articles=Page.find_by_slug(:news).children%>
   			 <%for news in news_articles.first 3%>
   	     	   <li>
-  		          <a href='/page/show/<%=news.id%>' class="summary"><%=news.title%></a>
+  		          <a href='/<%=news.permalink.path%>' class="summary"><%=news.title%></a>
   					<%if  cycle("1","2","3") == "1"%>
   		          		<span class='events_desc'>
   			            <%=strip_tags news.intro%>

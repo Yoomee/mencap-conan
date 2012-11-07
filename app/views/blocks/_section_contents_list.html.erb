@@ -26,13 +26,13 @@
       <ul id='item_<%=item.id%>' class='submenuitems' style='display: none'>
         <%contents.each do |subitem|%>
   		      <li class='subitem'>
-	  		      <%=link_to subitem, :id=>subitem.id%>
+	  		      <%=link_to subitem, subitem.permalink.path%>
 		  		  </li>
         <%end%>
       </ul>
     <%else%>
       <li class='pageItem'>
-        <%=link_to item, :id=>item.id%>
+        <%=link_to item, item.permalink.path%>
       </li>
     <%end%>
   <%end%>
