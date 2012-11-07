@@ -50,7 +50,7 @@
     <%=yield :head%>
   </head>
   <body <%if @is_home%>id="home"<%else%>id="hub"<%end%> class="body_bg_0<%=rand(5) + 1%>">
-    <div id="wrapper" <%if @page && @page.id == 12%>class="whos_who"<%end%>>
+    <div id="wrapper" <%if @page && (@page.slug == "whos_who" || @page.slug == "whats_on")%>class="whos_who"<%end%>>
       <div id="header">
         <a id='site_logo' href="/">Sheffield Mencap &amp; Gateway</a>
           <img id="logo_img" src="/assets/logo.gif" alt="Sheffield Mencap and Gateway" title="Sheffield Mencap and Gateway" width="" height="" />
