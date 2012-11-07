@@ -4,8 +4,8 @@ development:
 production:
   min_prefix_len: 1
   port: 9312
-  config_file: /data/mencap_conan/shared/production.sphinx.conf
-  searchd_file_path: /data/mencap_conan/shared/sphinx
-  searchd_log_path: /data/mencap_conan/shared/searchd.log
-  query_log_file: /data/mencap_conan/shared/searchd.query.log
-  pid_file: /data/mencap_conan/shared/searchd.production.pid
+  config_file: /data/mencap/shared/production.sphinx.conf
+  searchd_file_path: /data/mencap/shared/sphinx
+  searchd_log_path: /data/mencap/shared/searchd.log
+  query_log_file: /data/mencap/shared/searchd.query.log
+  pid_file: /data/mencap/shared/searchd.production.pid
