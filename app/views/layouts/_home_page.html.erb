@@ -21,12 +21,11 @@
 	<div id="news">
 	   <%=link_to_slug "What's on this week?", :whats_on, :id=>"whats_on_this_week"%>
     <ul class="lst_pic">
-      <%news_articles=Page.find_by_slug(:news).children%>
-      <%for page in news_articles.first 3%>
+      <%@news_pages.each do |page|%>
     		<li>
     		  <%=link_to page do%>
     					<%if page.image%>
-		    				<%=image_for page, "110x"%>
+		    				<%=image_for page, "110x75#"%>
     					<%end%>
 		          <strong class='summary'>
 		           	<%=page.title%>
@@ -40,5 +39,8 @@
     		</li>
       <%end%>
     </ul>
+    <div class='pull-right'>
+      <%= link_to 'All news items', Page.find_by_slug(:news)%>  
+    </div>
   </div>
 </div>
