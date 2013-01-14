@@ -5,7 +5,7 @@
       .row.mb-2
         .span7
           %h3=link_to_self(page)
-          %p=truncate(strip_tags(page.text), :length => 220)
+          %p=truncate(strip_tags(page.text), :length => 220).html_safe
           =link_to raw('&rarr; Read more'), page
     -if can?(:new, Page)
       .row.mb-2
