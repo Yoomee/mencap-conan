@@ -82,6 +82,12 @@ tick-green2.png: tick-green2-507321c83249a75ede5229fb2c88e3a7.png
 utilities_bg.png: utilities_bg-ba502ba1313b1387d8538e4560150f7c.png
 whats_on_this_week.png: whats_on_this_week-51126248ec28408b35c74a233e015fdf.png
 yoomee.png: yoomee-f1c9653f8cd4465dcfe88d7901349671.png
+application.js: application-c8ad8d19f6848812765347b854d16f54.js
+application.css: application-142027199b81d80c77599ba396230749.css
+ie6.css: ie6-746eb4c717d85d1f223c142010321e2d.css
+ie7.css: ie7-df7525e917401704ef453cb56bf16697.css
+old_ie.css: old_ie-d94db65bb879b9bcad3909371de7e58e.css
+print.css: print-2f21ca47e2eaf532fc9481c5e7e36566.css
 jquery-ui/ui-bg_diagonals-thick_18_b81900_40x40.png: jquery-ui/ui-bg_diagonals-thick_18_b81900_40x40-c3e0e1955420032feb67368f05648ded.png
 jquery-ui/ui-bg_diagonals-thick_20_666666_40x40.png: jquery-ui/ui-bg_diagonals-thick_20_666666_40x40-b54ce924a9f2343e1aada33aba870889.png
 jquery-ui/ui-bg_flat_10_000000_40x100.png: jquery-ui/ui-bg_flat_10_000000_40x100-cd2e3b2d176258c1e138e82b015b3c2d.png
@@ -100,13 +106,3 @@ loader-circle.gif: loader-circle-f863c9563af2ecc2d5c317b50a762550.gif
 loader-long.gif: loader-long-caa0f066d2677a830935b6ee49898da9.gif
 loader-square.gif: loader-square-385b70624cc94017209ecc4a21490252.gif
 redactor_image_upload_error.png: redactor_image_upload_error-813aad6b1e2ce7476faca6e60a759623.png
-jquery-ui-1.8.23.js: jquery-ui-1.8.23-248a0ac88e98ecc0bbe895ab2f7713ce.js
-jquery-ui-1.8.18.css: jquery-ui-1.8.18-525b8fc57478eb4d921d21ea053f2634.css
-jquery-ui.min.js: jquery-ui.min-449c6576aff2d5aef9fea2c0b667083b.js
-jquery.min.js: jquery.min-c17ee58f451d313a5585c3a1b1571ff2.js
-application.js: application-c8ad8d19f6848812765347b854d16f54.js
-application.css: application-e7f7188529cf5c8c2702a805794afece.css
-print.css: print-2f21ca47e2eaf532fc9481c5e7e36566.css
-ie6.css: ie6-746eb4c717d85d1f223c142010321e2d.css
-ie7.css: ie7-df7525e917401704ef453cb56bf16697.css
-old_ie.css: old_ie-d94db65bb879b9bcad3909371de7e58e.css
