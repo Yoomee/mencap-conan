@@ -50,53 +50,71 @@
     <%=yield :head%>
   </head>
   <body <%if @is_home%>id="home"<%else%>id="hub"<%end%> class="body_bg_0<%=rand(5) + 1%>">
+     <div id="header">
+       <div class="header-top">
+         <div class="header-inner">
+            <a id='site_logo' href="/">Sheffield Mencap &amp; Gateway</a>
+            
+            	<div id="utilities">
+              	  <form action="/search" method="get">
+              		  <div id='search_box'>
+              			  <input id="search_field" name="q" onfocus="var element = document.getElementById('search_field');element.value='';" type="text" value="Search" />          
+                			<input id="search_icon" type="submit" value="" title="search"/>
+                		</div>
+                	</form>     
+                	<div id="user_links">
+         	    	  	<a href="/">Home</a>
+         						<%if current_user && current_user.admin?%>
+                       <%=link_to 'Admin', '/pages', :id => 'admin_button'%>
+         						<%end%>
+
+         	    		  <%if logged_in?%>
+         		    		   <%=link_to("Logout", sign_out_path, :method => :delete)%>
+          	    		<%else%>
+         	      		  <a href="/login">Login</a>
+         	      		<%end%>
+
+
+                	</div>
+                </div>
+            
+         </div>
+       </div> <!-- /header top -->
+       <div class="header-bottom">
+         <div class="header-inner">
+            <img id="logo_img" src="/assets/logo.gif" alt="Sheffield Mencap and Gateway" title="Sheffield Mencap and Gateway" width="" height="" />            <ul id="nav">
+              <li><%=link_to_slug 'What we do', :what_we_do %></li>
+              <li><%=link_to_slug 'How we do it', :how_we_do_it%></li>
+              <li><%=link_to_slug 'Families', :families%></li>
+              <li><%=link_to_slug 'Our stuff', :our_stuff %></li>
+              <li><%=link_to_slug 'Support us', :support_us %></li>
+
+            </ul>
+            
+         </div>
+       </div>
+       
+       
+         
+       
+     
+	      
+     	
+   	 
+  
+      <div id="header_quotes">
+           <div id="background_switch_links">
+               <a href="javascript:void(0);" id="switch1" title="Switch it!">1</a>
+               <a href="javascript:void(0);" id="switch2" title="Switch it!">2</a>
+               <a href="javascript:void(0);" id="switch3" title="Switch it!">3</a>
+               <a href="javascript:void(0);" id="switch4" title="Switch it!">4</a>
+               <a href="javascript:void(0);" id="switch5" title="Switch it!">5</a>
+	  	    </div>	       
+       <br class="clear" />
+     </div><!-- /header --> 
+     
+     
     <div id="wrapper" <%if @page && (@page.slug == "whos_who" || @page.slug == "whats_on")%>class="whos_who"<%end%>>
-      <div id="header">
-        <a id='site_logo' href="/">Sheffield Mencap &amp; Gateway</a>
-          <img id="logo_img" src="/assets/logo.gif" alt="Sheffield Mencap and Gateway" title="Sheffield Mencap and Gateway" width="" height="" />
-        
-      	<div id="utilities">
-      	  <form action="/search" method="get">
-      		  <div id='search_box'>
-      			  <input id="search_field" name="q" onfocus="var element = document.getElementById('search_field');element.value='';" type="text" value="Search" />          
-        			<input id="search_icon" type="submit" value="" title="search"/>
-        		</div>
-        	</form>     
-        	<div id="user_links">
-	    	  	<a href="/">Home</a>
-						<%if current_user && current_user.admin?%>
-               <%=link_to 'Admin', '/pages', :id => 'admin_button'%>
-						<%end%>
-
-	    		  <%if logged_in?%>
-		    		   <%=link_to("Logout", sign_out_path, :method => :delete)%>
-  	    		<%else%>
-	      		  <a href="/login">Login</a>
-	      		<%end%>
-
-	    		  
-        	</div>
-        </div>
-	      <div id="header_quotes">
-            <div id="background_switch_links">
-                <a href="javascript:void(0);" id="switch1" title="Switch it!">1</a>
-                <a href="javascript:void(0);" id="switch2" title="Switch it!">2</a>
-                <a href="javascript:void(0);" id="switch3" title="Switch it!">3</a>
-                <a href="javascript:void(0);" id="switch4" title="Switch it!">4</a>
-                <a href="javascript:void(0);" id="switch5" title="Switch it!">5</a>
-	  	    </div>	
-      	</div>
-    	  <div id="nav_bg"></div>
-        <ul id="nav">
-          <li><%=link_to_slug 'What we do', :what_we_do %></li>
-          <li><%=link_to_slug 'How we do it', :how_we_do_it%></li>
-          <li><%=link_to_slug 'Families', :families%></li>
-          <li><%=link_to_slug 'Our stuff', :our_stuff %></li>
-          <li><%=link_to_slug 'Support us', :support_us %></li>
-          <li><%=link_to_slug 'Contact us', :contact_us%></li>
-        </ul>   
-        <br class="clear" />
-      </div><!-- /header -->
       <div class="content">
         <%if @is_home%>
     		  <%=render :partial => 'layouts/home_page'%>
