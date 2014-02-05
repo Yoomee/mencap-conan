@@ -26,25 +26,33 @@
     <%=javascript_tag do%>
       $(document).ready(function(){
         $("#switch1").click(function () {
-          $("body").removeClass("body_bg_02 body_bg_03 body_bg_04 body_bg_05");  
+          $("body").removeClass("body_bg_02 body_bg_03 body_bg_04 body_bg_05 body_bg_06 body_bg_07");  
           $("body").addClass("body_bg_01");
         });
         $("#switch2").click(function () {
-          $("body").removeClass("body_bg_01 body_bg_03 body_bg_04 body_bg_05"); 
+          $("body").removeClass("body_bg_01 body_bg_03 body_bg_04 body_bg_05 body_bg_06 body_bg_07"); 
           $("body").addClass("body_bg_02");
         });    
         $("#switch3").click(function () {
-          $("body").removeClass("body_bg_01 body_bg_02 body_bg_04 body_bg_05");  
+          $("body").removeClass("body_bg_01 body_bg_02 body_bg_04 body_bg_05 body_bg_06 body_bg_07");  
           $("body").addClass("body_bg_03");
         });
         $("#switch4").click(function () {
-          $("body").removeClass("body_bg_01 body_bg_02 body_bg_03 body_bg_05"); 
+          $("body").removeClass("body_bg_01 body_bg_02 body_bg_03 body_bg_05 body_bg_06 body_bg_07"); 
           $("body").addClass("body_bg_04");
         });      
         $("#switch5").click(function () {
-          $("body").removeClass("body_bg_01 body_bg_02 body_bg_03 body_bg_04"); 
+          $("body").removeClass("body_bg_01 body_bg_02 body_bg_03 body_bg_04 body_bg_06 body_bg_07"); 
           $("body").addClass("body_bg_05");
-        });    
+        });   
+        $("#switch6").click(function () {
+          $("body").removeClass("body_bg_01 body_bg_02 body_bg_03 body_bg_04 body_bg_05 body_bg_07"); 
+          $("body").addClass("body_bg_06");
+        });
+        $("#switch7").click(function () {
+          $("body").removeClass("body_bg_01 body_bg_02 body_bg_03 body_bg_04 body_bg_05 body_bg_06"); 
+          $("body").addClass("body_bg_07");
+        });         
       });
     <%end%>
     <%=yield :head%>
@@ -109,6 +117,8 @@
                <a href="javascript:void(0);" id="switch3" title="Switch it!">3</a>
                <a href="javascript:void(0);" id="switch4" title="Switch it!">4</a>
                <a href="javascript:void(0);" id="switch5" title="Switch it!">5</a>
+               <a href="javascript:void(0);" id="switch6" title="Switch it!">6</a>
+               <a href="javascript:void(0);" id="switch7" title="Switch it!">7</a>
 	  	    </div>	       
        <br class="clear" />
      </div><!-- /header --> 
